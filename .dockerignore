@@ -1,0 +1,44 @@
+# Version control
+.git/
+.gitignore
+.github/
+
+# Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Local virtual environments (never copy into the image)
+.venv/
+venv/
+env/
+ENV/
+
+# Secrets and environment variables
+# Inject at runtime via -e or --env-file, never bake into the image
+.env
+.env.local
+.env.*.local
+
+# Build and test artifacts
+dist/
+build/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# IDEs and operating system
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
