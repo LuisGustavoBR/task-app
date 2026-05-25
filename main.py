@@ -11,6 +11,8 @@ app = FastAPI(title="TaskFlow", description="Gerenciador de Tarefas")
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
+os.makedirs(STATIC_DIR, exist_ok=True)
+
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 app.include_router(auth_router.router)
