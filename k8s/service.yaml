@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: task-app
+  namespace: task-app
+  labels:
+    name: task-app
+spec:
+  type: NodePort
+  selector:
+    name: task-app
+  ports:
+    - port: 80
+      targetPort: 8000
+      nodePort: 32767
+      protocol: TCP
