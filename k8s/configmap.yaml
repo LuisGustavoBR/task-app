@@ -4,7 +4,7 @@ metadata:
   name: task-app-config
   namespace: task-app
   labels:
-    app.kubernetes.io/name: task-app
+    name: task-app
 data:
   APP_ENV: "production"
   LOG_LEVEL: "info"
